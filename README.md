@@ -25,6 +25,12 @@ fractal_noise.set_persistance(0.5)
 fractal_noise.get_noise3d(x, y, t)
 ```
 
+Preview
+-------
+
+![3D noise screenshot](screenshot.png)
+3D noise
+
 
 Notes
 -------
