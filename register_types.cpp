@@ -3,8 +3,8 @@
 
 void register_opensimplex_types() {
 
-    ObjectTypeDB::register_type<Noise>();
-    ObjectTypeDB::register_type<FractalNoise>();
+    ObjectTypeDB::register_type<OsnNoise>();
+    ObjectTypeDB::register_type<OsnFractalNoise>();
 
 }
 

@@ -6,15 +6,15 @@
 
 // C++ wrapper for OpenSimplex context.
 // Allocates permutation memory for each instance.
-class Noise : public Reference {
-    OBJ_TYPE(Noise, Reference)
+class OsnNoise : public Reference {
+    OBJ_TYPE(OsnNoise, Reference)
 
     osn_context * _context;
     int _seed;
 
 public:
-    Noise();
-    ~Noise();
+    OsnNoise();
+    ~OsnNoise();
 
     void set_seed(int seed);
     int get_seed();
@@ -37,10 +37,10 @@ protected:
 
 // Fractal noise generator with a few tweakable parameters. Lightweight.
 // This is mostly used in games for generating heightmaps or clouds.
-class FractalNoise : public Reference {
-    OBJ_TYPE(FractalNoise, Reference)
+class OsnFractalNoise : public Reference {
+    OBJ_TYPE(OsnFractalNoise, Reference)
 
-    Ref<Noise> _noise;
+    Ref<OsnNoise> _noise;
 
     float _persistance; // Controls details, value in [0,1]. Higher increases grain, lower increases smoothness.
     int _octaves; // Number of noise layers
@@ -48,10 +48,10 @@ class FractalNoise : public Reference {
     float _lacunarity; // Controls period change across octaves. 2 is usually a good value to address all detail levels.
 
 public:
-    FractalNoise();
+    OsnFractalNoise();
 
-    Ref<Noise> get_source_noise() { return _noise; }
-    void set_source_noise(Ref<Noise> noise) { _noise = noise; }
+    Ref<OsnNoise> get_source_noise() { return _noise; }
+    void set_source_noise(Ref<OsnNoise> noise) { _noise = noise; }
 
     void set_octaves(int count) { _octaves = count; }
     int get_octaves() const { return _octaves; }
@@ -70,7 +70,7 @@ public:
     float get_noise_4d(float x, float y, float z, float w);
 
     // Convenience
-
+    
     _FORCE_INLINE_ float get_noise_2dv(Vector2 v) { return get_noise_2d(v.x, v.y); }
     _FORCE_INLINE_ float get_noise_3dv(Vector3 v) { return get_noise_3d(v.x, v.y, v.z); }
 
