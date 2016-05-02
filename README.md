@@ -8,14 +8,14 @@ Example usage
 
 ```gdscript
 # Create basic open-simplex noise
-var noise = Noise.new()
+var noise = OsnNoise.new()
 noise.set_seed(666)
 
 # Get values
 noise.get_noise_3d(x, y, t)
 
 # Create fractal noise helper
-var fractal_noise = FractalNoise.new()
+var fractal_noise = OsnFractalNoise.new()
 fractal_noise.set_source_noise(noise)
 fractal_noise.set_period(64)
 fractal_noise.set_octaves(4)
