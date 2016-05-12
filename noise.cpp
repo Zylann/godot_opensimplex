@@ -65,7 +65,7 @@ float OsnFractalNoise::get_noise_2d(float x, float y) {
         // But that would mean allocating a new osn_context for each!
         // So I fallback on X modification.
         x += _period;
-        sum += src.get_noise_2d(x, y);
+        sum += src.get_noise_2d(x, y) * amp;
     }
 
     return sum / max;
@@ -92,7 +92,7 @@ float OsnFractalNoise::get_noise_3d(float x, float y, float z) {
         amp *= _persistance;
         max += amp;
         x += _period;
-        sum += src.get_noise_3d(x, y, z);
+        sum += src.get_noise_3d(x, y, z) * amp;
     }
 
     return sum / max;
@@ -121,7 +121,7 @@ float OsnFractalNoise::get_noise_4d(float x, float y, float z, float w) {
         amp *= _persistance;
         max += amp;
         x += _period;
-        sum += src.get_noise_4d(x, y, z, w);
+        sum += src.get_noise_4d(x, y, z, w) * amp;
     }
 
     return sum / max;
