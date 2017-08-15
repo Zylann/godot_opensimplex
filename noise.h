@@ -7,7 +7,7 @@
 // C++ wrapper for OpenSimplex context.
 // Allocates permutation memory for each instance.
 class OsnNoise : public Reference {
-    OBJ_TYPE(OsnNoise, Reference)
+    GDCLASS(OsnNoise, Reference)
 
     osn_context * _context;
     int _seed;
@@ -38,7 +38,7 @@ protected:
 // Fractal noise generator with a few tweakable parameters. Lightweight.
 // This is mostly used in games for generating heightmaps or clouds.
 class OsnFractalNoise : public Reference {
-    OBJ_TYPE(OsnFractalNoise, Reference)
+    GDCLASS(OsnFractalNoise, Reference)
 
     Ref<OsnNoise> _noise;
 

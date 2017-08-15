@@ -26,15 +26,15 @@ int OsnNoise::get_seed() {
 
 void OsnNoise::_bind_methods() {
 
-    ObjectTypeDB::bind_method(_MD("get_seed"), &OsnNoise::get_seed);
-    ObjectTypeDB::bind_method(_MD("set_seed", "seed"), &OsnNoise::set_seed);
+    ClassDB::bind_method(D_METHOD("get_seed"), &OsnNoise::get_seed);
+    ClassDB::bind_method(D_METHOD("set_seed", "seed"), &OsnNoise::set_seed);
 
-    ObjectTypeDB::bind_method(_MD("get_noise_2d", "x", "y"), &OsnNoise::get_noise_2d);
-    ObjectTypeDB::bind_method(_MD("get_noise_3d", "x", "y", "z"), &OsnNoise::get_noise_3d);
-    ObjectTypeDB::bind_method(_MD("get_noise_4d", "x", "y", "z", "w"), &OsnNoise::get_noise_4d);
+    ClassDB::bind_method(D_METHOD("get_noise_2d", "x", "y"), &OsnNoise::get_noise_2d);
+    ClassDB::bind_method(D_METHOD("get_noise_3d", "x", "y", "z"), &OsnNoise::get_noise_3d);
+    ClassDB::bind_method(D_METHOD("get_noise_4d", "x", "y", "z", "w"), &OsnNoise::get_noise_4d);
 
-    ObjectTypeDB::bind_method(_MD("get_noise_2dv", "pos"), &OsnNoise::get_noise_2dv);
-    ObjectTypeDB::bind_method(_MD("get_noise_3dv", "pos"), &OsnNoise::get_noise_3dv);
+    ClassDB::bind_method(D_METHOD("get_noise_2dv", "pos"), &OsnNoise::get_noise_2dv);
+    ClassDB::bind_method(D_METHOD("get_noise_3dv", "pos"), &OsnNoise::get_noise_3dv);
 
 }
 
@@ -129,27 +129,27 @@ float OsnFractalNoise::get_noise_4d(float x, float y, float z, float w) {
 
 void OsnFractalNoise::_bind_methods() {
 
-    ObjectTypeDB::bind_method(_MD("get_source_noise"), &OsnFractalNoise::get_source_noise);
-    ObjectTypeDB::bind_method(_MD("set_source_noise", "noise_instance"), &OsnFractalNoise::set_source_noise);
+    ClassDB::bind_method(D_METHOD("get_source_noise"), &OsnFractalNoise::get_source_noise);
+    ClassDB::bind_method(D_METHOD("set_source_noise", "noise_instance"), &OsnFractalNoise::set_source_noise);
 
-    ObjectTypeDB::bind_method(_MD("set_octaves", "octave_count"), &OsnFractalNoise::set_octaves);
-    ObjectTypeDB::bind_method(_MD("get_octaves"), &OsnFractalNoise::get_octaves);
+    ClassDB::bind_method(D_METHOD("set_octaves", "octave_count"), &OsnFractalNoise::set_octaves);
+    ClassDB::bind_method(D_METHOD("get_octaves"), &OsnFractalNoise::get_octaves);
 
-    ObjectTypeDB::bind_method(_MD("set_period", "period"), &OsnFractalNoise::set_period);
-    ObjectTypeDB::bind_method(_MD("get_period"), &OsnFractalNoise::get_period);
+    ClassDB::bind_method(D_METHOD("set_period", "period"), &OsnFractalNoise::set_period);
+    ClassDB::bind_method(D_METHOD("get_period"), &OsnFractalNoise::get_period);
 
-    ObjectTypeDB::bind_method(_MD("set_persistance", "persistance"), &OsnFractalNoise::set_persistance);
-    ObjectTypeDB::bind_method(_MD("get_persistance"), &OsnFractalNoise::get_persistance);
+    ClassDB::bind_method(D_METHOD("set_persistance", "persistance"), &OsnFractalNoise::set_persistance);
+    ClassDB::bind_method(D_METHOD("get_persistance"), &OsnFractalNoise::get_persistance);
 
-    ObjectTypeDB::bind_method(_MD("set_lacunarity", "lacunarity"), &OsnFractalNoise::set_lacunarity);
-    ObjectTypeDB::bind_method(_MD("get_lacunarity"), &OsnFractalNoise::get_lacunarity);
+    ClassDB::bind_method(D_METHOD("set_lacunarity", "lacunarity"), &OsnFractalNoise::set_lacunarity);
+    ClassDB::bind_method(D_METHOD("get_lacunarity"), &OsnFractalNoise::get_lacunarity);
 
-    ObjectTypeDB::bind_method(_MD("get_noise_2d", "x", "y"), &OsnFractalNoise::get_noise_2d);
-    ObjectTypeDB::bind_method(_MD("get_noise_3d", "x", "y", "z"), &OsnFractalNoise::get_noise_3d);
-    ObjectTypeDB::bind_method(_MD("get_noise_4d", "x", "y", "z", "w"), &OsnFractalNoise::get_noise_4d);
+    ClassDB::bind_method(D_METHOD("get_noise_2d", "x", "y"), &OsnFractalNoise::get_noise_2d);
+    ClassDB::bind_method(D_METHOD("get_noise_3d", "x", "y", "z"), &OsnFractalNoise::get_noise_3d);
+    ClassDB::bind_method(D_METHOD("get_noise_4d", "x", "y", "z", "w"), &OsnFractalNoise::get_noise_4d);
 
-    ObjectTypeDB::bind_method(_MD("get_noise_2dv", "pos"), &OsnFractalNoise::get_noise_2dv);
-    ObjectTypeDB::bind_method(_MD("get_noise_3dv", "pos"), &OsnFractalNoise::get_noise_3dv);
+    ClassDB::bind_method(D_METHOD("get_noise_2dv", "pos"), &OsnFractalNoise::get_noise_2dv);
+    ClassDB::bind_method(D_METHOD("get_noise_3dv", "pos"), &OsnFractalNoise::get_noise_3dv);
 
 }
 
