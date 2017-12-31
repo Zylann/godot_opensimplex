@@ -2,6 +2,8 @@ OpenSimplex Godot integration
 =================================
 
 This is a simple wrapping of the OpenSimplex C library, designed to avoid the patent issue on Simplex noise.
+The master branch is for Godot 3.x series.
+For Godot 2.x, checkout branch `godot2`.
 
 Install
 ----------
