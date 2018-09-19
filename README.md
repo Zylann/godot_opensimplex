@@ -5,6 +5,9 @@ This is a simple wrapping of the OpenSimplex C library, designed to avoid the pa
 The master branch is for Godot 3.x series.
 For Godot 2.x, checkout branch `godot2`.
 
+IMPORTANT: Godot 3.1 now integrates OpenSimplex under a very similar API,
+as a result this module is no longer maintained in Godot 3.1 onwards.
+
 Install
 ----------
 
